@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Loading...</title>
+</head>
+<body>
+<div id="content">Loading...</div>
+<script type="module">
+    const searchParams = new URLSearchParams(window.location.search)
+    const baseUrlParam = searchParams.get('baseUrl')
+    const baseUrl = baseUrlParam ? baseUrlParam : 'rpg-engine.dovalmoexp.nl'
+    let module = await import(`https://${baseUrl}/v1/game.js`)
+    const game = new module.default('./game.json')
+    console.log(game)
+</script>
+</body>
+</html>
