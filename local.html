@@ -8,8 +8,8 @@
 <div id="content">Loading...</div>
 <script type="module">
     import game from 'https://localhost:44370/v1/game.js'
-    const engine = new game('./game.json')
-    console.log(game)
+    const engine = new game('./game/', 'game.json')
+    engine.start('content')
 </script>
 </body>
 </html>
