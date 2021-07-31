@@ -1,11 +1,11 @@
 {
     "map": {
-        "name": "World map",
-        "type": "grid",
-        "details": {
+        "main": "world",
+        "maps": {
             "includes": [
-                "cityA.json", 
-                "cityB.json"
+                "city-a.json", 
+                "city-b.json",
+                "world-map.json"
             ]
         }
     }
